@@ -56,11 +56,15 @@ i {
 
 
 .btn {
-    border: 1px solid whitesmoke;
+    border: 1px solid #006699;
+    text-align: center;
     text-decoration: none;
+    background-color: #006699;
     color: whitesmoke;
     padding: 2%;
     border-radius: 5px;
+    width: 60px;
+    height: 20px;
 } 
 
 .btn:hover {
