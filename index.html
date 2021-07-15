@@ -9,6 +9,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css"
     />
+    <script
+      src="https://kit.fontawesome.com/43cadacad0.js"
+      crossorigin="anonymous"
+    ></script>
     <title>benbuob.com</title>
   </head>
   <body>
@@ -16,28 +20,33 @@
 
     <div class="wrapper">
       <nav id="navbar">
+        <a href="index.html" id="logo">benbuob.com</a>
+
         <ul id="navbar-nav">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link" id="logo">B</a>
-          </li>
           <li class="nav-item">
             <a href="#skills-header" class="nav-link">Skills</a>
           </li>
+
           <li class="nav-item">
             <a href="#project-header" class="nav-link">Projects</a>
           </li>
+
           <li class="nav-item">
             <a href="#contact" class="nav-link">Contact</a>
           </li>
-          <li class="nav-item">
-            <div>
-              <label class="switch">
-                <input type="checkbox" />
-                <span class="slider" class="nav-link"></span>
-              </label>
-            </div>
-          </li>
         </ul>
+
+        <div id="all-switch">
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider" class="nav-link"></span>
+          </label>
+        </div>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
       </nav>
 
       <header>
@@ -74,18 +83,40 @@
 
       <section id="projects">
         <article class="project-tile">
-          <h4>German Tutor Website</h4>
-          <img src="projectOne.png" class="tile-img" alt="" />
-          <p>
-            A brochure website made for a friend of mine who teaches German.
-          </p>
+          <h4>A Better To Do List</h4>
+          <img src="ToDo.png" class="tile-img" alt="" />
+          <p>A three part to-do list based on priority.</p>
           <div class="info-row">
             <img class="response" src="response.png" alt="" />
-            <a href="https://redmondgermantutor.com" target="_blank" class="btn"
+            <a
+              href="https://benbuob.github.io/ABetterToDoList/"
+              target="_blank"
+              class="btn"
               >Launch</a
             >
             <a
-              href="https://github.com/SunnyDayIPA/eastsidegermantutor"
+              href="https://github.com/benbuob/ABetterToDoList"
+              target="_blank"
+              class="btn"
+              >Code</a
+            >
+          </div>
+        </article>
+
+        <article class="project-tile">
+          <h4>Form with Validation</h4>
+          <img src="form.png" class="tile-img" alt="" />
+          <p>Glass pane styled form with validation check.</p>
+          <div class="info-row">
+            <img class="response" src="response.png" alt="" />
+            <a
+              href="https://benbuob.github.io/Form_Validation/"
+              target="_blank"
+              class="btn"
+              >Launch</a
+            >
+            <a
+              href="https://github.com/benbuob/Form_Validation"
               target="_blank"
               class="btn"
               >Code</a
@@ -97,16 +128,42 @@
           <h4>Concrete Volume Calculator</h4>
           <img src="projectTwo.png" class="tile-img" alt="" />
           <p>
-            Calculator to estimate the amount of concrete needed for a driveway.
+            Easy tool for estimating the amount of concrete needed for a
+            driveway.
           </p>
           <div class="info-row">
             <img class="response" src="response.png" alt="" />
-            <a href="" target="_blank" class="btn">Launch</a>
             <a
-              href="https://github.com/SunnyDayIPA/Concrete-Volume-Calculator"
+              href="https://benbuob.github.io/Concrete_Calculator/"
+              target="_blank"
+              class="btn"
+              >Launch</a
+            >
+            <a
+              href="https://github.com/benbuob/Concrete_Calculator"
               target="_blank"
               class="btn"
               target="_blank"
+              >Code</a
+            >
+          </div>
+        </article>
+
+        <article class="project-tile">
+          <h4>German Tutor Website</h4>
+          <img src="projectOne.png" class="tile-img" alt="" />
+          <p>
+            A brochure website made for a friend of mine who teaches German.
+          </p>
+          <div class="info-row">
+            <img class="response" src="response.png" alt="" />
+            <a href="https://redmondgermantutor.com" target="_blank" class="btn"
+              >Launch</a
+            >
+            <a
+              href="https://github.com/benbuob/redmondgermantutor"
+              target="_blank"
+              class="btn"
               >Code</a
             >
           </div>
@@ -118,19 +175,18 @@
           <p>A tip Calculator for restaurant outings.</p>
           <div class="info-row">
             <img class="response" src="response.png" alt="" />
-            <a href="" target="_blank" class="btn">Launch</a>
-            <a href="" target="_blank" class="btn">Code</a>
-          </div>
-        </article>
-
-        <article class="project-tile">
-          <h4>Click Outside Modal</h4>
-          <img src="modal.png" class="tile-img" alt="" />
-          <p>A simple informational app with a click outside modal.</p>
-          <div class="info-row">
-            <img class="response" src="response.png" alt="" />
-            <a href="" target="_blank" class="btn">Launch</a>
-            <a href="" target="_blank" class="btn">Code</a>
+            <a
+              href="https://benbuob.github.io/Tip_Calculator/"
+              target="_blank"
+              class="btn"
+              >Launch</a
+            >
+            <a
+              href="https://github.com/benbuob/Tip_Calculator"
+              target="_blank"
+              class="btn"
+              >Code</a
+            >
           </div>
         </article>
 
