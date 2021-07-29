@@ -1,5 +1,7 @@
 //Navbar animation
 const nav = document.querySelector("#navbar");
+const moon = document.querySelector(".moon-icon");
+const sun = document.querySelector(".sun-icon");
 
 nav.addEventListener("mouseover", function (e) {
   if (e.target.classList.contains("nav-link")) {
