@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
@@ -500,3 +501,507 @@ p {
     cursor: pointer;
   }
 }
+=======
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 006699    006699*/
+:root {
+  --main-bg-color: white;
+  --main-txt-color: #006699;
+
+  --toggle-bg-color: #006699;
+  --toggle-circle-color: whitesmoke;
+
+  --tile-bg-color: whitesmoke;
+  --tile-txt-color: #006699;
+
+  --button-bg-color: #006699;
+  --button-txt-color: whitesmoke;
+
+  --footer-bg-color: #006699;
+  --footer-txt-color: whitesmoke;
+}
+
+/* creating a class not connected with any element yet, JS gives this class to the body element */
+.dark {
+  --main-bg-color: #121212;
+  --main-txt-color: #bdbdbd;
+
+  --toggle-bg-color: #bdbdbd;
+  --toggle-circle-color: #1e1e1e;
+
+  --tile-bg-color: #1e1e1e;
+  --tile-txt-color: #bdbdbd;
+
+  --button-bg-color: #006699;
+  --button-txt-color: #bdbdbd;
+
+  --footer-bg-color: #1e1e1e;
+  --footer-txt-color: #006699;
+}
+
+body {
+  overflow-y: scroll;
+  height: auto;
+  width: auto;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading Screen Animation...NOT used in final, save for reference */
+/* .load-screen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 40px;
+  color: #006699;
+  visibility: visible;
+  background-image: linear-gradient(whitesmoke, #006699);
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.load-screen::after {
+  content: "\2026";
+  /* display: inline; */
+/* overflow: hidden; */
+/* vertical-align: bottom;
+  animation: dots steps(4, end) 2s infinite;
+  width: 0px;
+} */
+
+/* @keyframes dots {
+  to {
+    width: 1.25em;
+  }
+} */
+
+/* .wrapper {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+} */
+
+.wrapper {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.3;
+  background-color: var(--main-bg-color);
+  color: var(--main-txt-color);
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  grid-template-rows: 20vh 80vh 35vh auto 35vh auto 60vh;
+  grid-template-areas:
+    "... nav nav ..."
+    "... header header ..."
+    "skills-header skills-header skills-header skills-header"
+    "skills skills skills skills"
+    "project-header project-header project-header project-header"
+    " projects projects projects projects"
+    "footer footer footer footer";
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+p {
+  padding: 3px;
+}
+
+i {
+  font-size: 30px;
+}
+
+.btn {
+  border: 1px solid var(--button-bg-color);
+  text-align: center;
+  text-decoration: none;
+  color: var(--two);
+  padding: 2%;
+  border-radius: 5px;
+  width: 60px;
+  height: 20px;
+  background-color: var(--button-bg-color);
+  color: var(--button-txt-color);
+}
+
+.btn:hover {
+  background-color: var(--one);
+  color: var(--two);
+}
+
+#navbar {
+  grid-area: nav;
+  width: 100%;
+  height: 8%;
+  position: fixed;
+  background-color: var(--main-bg-color);
+  opacity: 0.9;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* this is the flex container */
+#navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin-left: 20%;
+}
+
+.nav-item {
+  height: 100%;
+  width: 120px;
+  margin-top: 1em;
+  text-align: center;
+  margin-left: 1%;
+  padding: 10px;
+}
+
+/* .nav-item:first-child {
+  margin-right: auto;
+  margin-left: 2em;
+  padding: 2px;
+}
+
+.nav-item:last-child {
+  margin-right: 2em;
+} */
+
+.nav-link {
+  margin: none;
+  text-decoration: none;
+  color: var(--two);
+  font-size: 1.2rem;
+}
+
+/* Hamburger Menu */
+.checkbtn {
+  display: none;
+}
+
+/* Darkmode Slider */
+#all-switch {
+  margin-right: 5%;
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.sun-icon {
+  display: inline;
+}
+.moon-icon {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 25px;
+  margin: 0 10px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--toggle-bg-color);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 22px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--toggle-circle-color);
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+input:checked + .slider {
+  background-color: var(--toggle-bg-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(23px);
+}
+
+#logo {
+  font-family: "Press Start 2P";
+  font-size: 1.2rem;
+  padding: 0;
+  margin-top: 20px;
+  margin-left: 5%;
+  text-decoration: none;
+  color: var(--main-txt-color);
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--two);
+}
+
+.welcome {
+  position: relative;
+  padding-top: 30%;
+  padding-bottom: 50%;
+}
+
+#hello {
+  animation-name: moveLeft;
+  animation-duration: 1.5s;
+  /* animation-delay: 1.8s; */
+}
+
+#developer {
+  animation-name: moveRight;
+  animation-duration: 1.5s;
+  /* animation-delay: 1.8s; */
+}
+
+/* Defining the keyframe animations */
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translate(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+#skills-header {
+  grid-area: skills-header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#skills {
+  grid-area: skills;
+  display: grid;
+  grid-gap: 25px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-auto-rows: minmax(400px, 1fr);
+  background-color: var(--three);
+  color: var(--one);
+}
+
+.skills-card {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  background-color: var(--three);
+  color: var(--two);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--tile-bg-color);
+  color: var(--tile-txt-color);
+}
+
+#project-header {
+  grid-area: project-header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--three);
+}
+
+.response {
+  width: 70px;
+  height: 70px;
+}
+
+#projects {
+  color: var(--two);
+  background-color: var(--three);
+  grid-area: projects;
+  grid-gap: 40px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-auto-rows: minmax(400px, 1fr);
+}
+
+.project-tile {
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 0 2px #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--tile-bg-color);
+  color: var(--tile-txt-color);
+  padding: 15px;
+}
+
+.tile-img {
+  width: 150px;
+  height: 150px;
+  filter: brightness(90%);
+  margin-bottom: 20px;
+  z-index: 1;
+  border-radius: 100px;
+  margin-top: 10px;
+}
+
+.info-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn {
+  width: 70px;
+  height: 35px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-txt-color);
+}
+
+.contact-link {
+  text-decoration: none;
+  color: var(--one);
+}
+
+.contact-link:hover {
+  background-color: var(--footer-txt-color);
+  color: var(--footer-bg-color);
+  border-radius: 5px;
+}
+
+p {
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 150%;
+}
+
+.email {
+  margin-bottom: 5%;
+}
+
+/* Making the navigation more responsive, adding the hamburger menu for mobile devices */
+#check {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  #navbar-nav {
+    display: none;
+  }
+
+  /* basically saying, when the element, selected by its id of navbar-nav
+  also has a class of "show" toggled on it, then display in this way */
+  #navbar-nav.show {
+    z-index: 10;
+    position: absolute;
+    top: 90%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-items: center;
+    height: 200px;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--main-txt-color);
+  }
+
+  .checkbtn {
+    display: block;
+    margin-top: 5px;
+    margin-right: 5%;
+    cursor: pointer;
+  }
+}
+>>>>>>> 9ca478b2d13b9bdee9e0df39efc9ebfcdc47d281
